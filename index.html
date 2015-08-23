@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Thud</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+			#Dwarf,#Troll,#message {
+				position: absolute;
+				top: 10px;
+				font-size: 24px;
+			}
+			#Dwarf { left: 10px; color: #00A800;} #Troll { right: 10px; color: #A80000; } #message { left: 50%; color: #f0f0f0; }
+		</style>
+	</head>
+	<body>
+		<div id="Dwarf">Dwarf's Turn</div><div id="message">Thud</div><div id="Troll"></div>
+		<script src="js/three.min.js"></script>
+		<script src="js/animationframe.js"></script>
+		<script src="js/orbitcontrols.js"></script>
+		<script src="js/tween.js"></script>
+		<script src="thud.js"></script>
+		<script>
+			var game = new game();
+			game.run();
+		</script>
+		
+	</body>
+</html>
