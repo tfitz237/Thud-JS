@@ -1,3 +1,3 @@
 # Thud-JS
-A [https://github.com/mrdoob/three.js/](threeJS) implementation of the [https://github.com/willwagner602/Thud](Thud API) by [https://github.com/willwagner602](willwagner602)
+A [threejs](https://github.com/mrdoob/three.js/) implementation of the [Thud API](https://github.com/willwagner602/Thud) by [willwagner602](https://github.com/willwagner602)
 
