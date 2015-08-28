@@ -514,7 +514,6 @@ function game() {
 		thud.renderer.render(thud.scene, thud.camera);
 		thud.raycaster.setFromCamera( thud.mouse, thud.camera );
 		checkIntersect();
-		//
 	
 	}
 	
