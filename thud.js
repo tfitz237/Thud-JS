@@ -222,7 +222,12 @@ function game() {
 					if(current.type == "open") {
 						
 						changeColor(current.square, current.square.material.emissive.getHex() + thud.config.colors.highlight[start.type]);
-					} else if (current.type != "null" && (current.square.position.x - start.obj.position.x > 0)) break;
+					} else if (current.type != "null" && (start != current))  {
+						if(checkMove(start, current)) {
+							changeColor(current.obj, thud.config.colors.piece[current.type] + thud.config.colors.highlight[start.type]);
+						}
+						break;
+					}
 				}
 				// RIGHT
 				for (var x = start.obj.position.x; x > 0; x--) {
@@ -349,11 +354,13 @@ function game() {
 			if(current.type != start.type) {
 				if(debug()) console.groupCollapsed();
 				debug('Checking if move is valid');
+				debug([start,current]);
 				var response = thud.api.send('move/validate', {'game':thud.game.token,'player':thud.player[thud.current_player].token, 'start':[start.square.position.x,start.square.position.y],'destination':[current.square.position.x, current.square.position.y]});
 				debug("Checking -> Response from server: " + response);
 				response = JSON.parse(response);
 				if(typeof response == "boolean") {
 					debug("Checking -> Is it valid? " + response);
+					if(debug()) console.groupEnd();
 					return response;
 				}
 				else if (typeof response == "object") {
@@ -361,7 +368,11 @@ function game() {
 				if(debug()) console.groupEnd();
 					return true;
 				}
-				else return false;
+				
+				else {
+					if(debug()) console.groupEnd();
+					return false;
+				}
 			}
 	}
 	
