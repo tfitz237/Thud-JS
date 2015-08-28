@@ -48,8 +48,8 @@ function game() {
 		thud.config.api_url = "http://192.241.198.50:80/"; // Production API
 		
 		if(setup()) {
-			var thudBoard = new thudBoard();
-			var thudPieces = new thudPieces();
+			var thudBoard = new thudBoardfn();
+			var thudPieces = new thudPiecesfn();
 		// Create Scene
 			thudLight();
 			thudBoard.create();
@@ -98,7 +98,7 @@ function game() {
 	}			
 	
 	// Board functions: create board and clean board colors.
-	function thudBoard() {
+	function thudBoardfn() {
 		this.create = create;
 		this.clean = clean;
 		
@@ -371,7 +371,7 @@ function game() {
 	
 	
 	
-	function thudPieces() {
+	function thudPiecesfn() {
 		this.create = create;
 		this.remove = remove;
 		this.move = move;
