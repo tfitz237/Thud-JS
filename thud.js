@@ -5,6 +5,7 @@ function game() {
 	thud.run = run;
 	var thudBoard = new thudBoardfn();
 	var thudPieces = new thudPiecesfn();
+	
 	// Game initialization 
 	function init() {
 		thud.api = new api();
