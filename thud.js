@@ -48,7 +48,8 @@ function game() {
 		thud.config.api_url = "http://192.241.198.50:80/"; // Production API
 		
 		if(setup()) {
-		
+			var thudBoard = new thudBoard();
+			var thudPieces = new thudPieces();
 		// Create Scene
 			thudLight();
 			thudBoard.create();
