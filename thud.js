@@ -5,7 +5,8 @@ function game() {
 	var thud = this;
 	thud.setup = init;
 	thud.run = run;
-	
+	var thudBoard = new thudBoardfn();
+	var thudPieces = new thudPiecesfn();
 	// Game initialization 
 	function init() {
 		thud.api = new api();
@@ -48,8 +49,6 @@ function game() {
 		thud.config.api_url = "http://192.241.198.50:80/"; // Production API
 		
 		if(setup()) {
-			var thudBoard = new thudBoardfn();
-			var thudPieces = new thudPiecesfn();
 		// Create Scene
 			thudLight();
 			thudBoard.create();
