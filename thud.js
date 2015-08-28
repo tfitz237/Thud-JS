@@ -1,6 +1,4 @@
 (function(){			
-
-
 function game() {
 	var thud = this;
 	thud.setup = init;
