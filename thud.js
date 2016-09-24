@@ -45,7 +45,7 @@ function game() {
 		
 		
 		//thud.config.api_url = "http://96.37.4.88:12000/"; // Development API
-		thud.config.api_url = "http://willwagner.me:12000/"; // Production API
+		thud.config.api_url = "http://willwagner.me/thud/"; // Production API
 		
 		if(setup()) {
 		// Create Scene
